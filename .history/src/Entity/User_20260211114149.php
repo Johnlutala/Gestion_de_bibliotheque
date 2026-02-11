@@ -162,12 +162,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getAge(): ?int
+    public function getAge(): ?Number
     {
         return $this->age;
     }
 
-    public function setAge(?int $age): static
+    public function setAge(?Number $age): static
     {
         $this->age = $age;
 

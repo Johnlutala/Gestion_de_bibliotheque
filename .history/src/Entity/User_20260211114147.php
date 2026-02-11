@@ -42,8 +42,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 50)]
     private ?string $sexe = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $age = null;
+    #[ORM\Column(type: Types::NUMBER, nullable: true)]
+    private ?Number $age = null;
 
     #[ORM\Column(length: 50)]
     private ?string $status = null;
@@ -162,12 +162,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getAge(): ?int
+    public function getAge(): ?Number
     {
         return $this->age;
     }
 
-    public function setAge(?int $age): static
+    public function setAge(?Number $age): static
     {
         $this->age = $age;
 
