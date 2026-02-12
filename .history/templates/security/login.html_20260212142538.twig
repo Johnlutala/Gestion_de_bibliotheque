@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body> <!-- Container centré verticalement et horizontalement --> <div class="container vh-100 d-flex justify-content-center align-items-center"> <div class="col-md-4"> <form class="border p-4 rounded shadow w-100"> <h2 class="text-center mb-4">Connexion</h2> <p class="text-justify-extends"> <strong>Bienvenue !</strong> <br> Connectez-vous à votre compte</p> <!-- Champ username --> <div class="mb-3"> <label for="username" class="form-label">Nom d'utilisateur</label> <input type="text" class="form-control" id="username" placeholder="Entrez votre nom d'utilisateur"> </div> <!-- Champ mot de passe --> <div class="mb-3"> <label for="password" class="form-label">Mot de passe</label> <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe"> </div> <!-- Bouton connexion --> <button type="submit" class="btn btn-primary w-100 ">Se connecter</button> <p class="text-justify-extends mt-3"> Vous n'avez pas de compte ? <a href=""> Inscrivez-vous</a> </p> </form> </div> </div>
+
+</body>
+</html>
+{% endblock %}
+
