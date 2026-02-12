@@ -1,0 +1,98 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}-Inscription {% endblock %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-body p-4">
+            <h3 class="text-center mb-4">Formulaire d'inscription</h3>
+
+            <form method="POST">
+
+                <div class="row">
+                    <!-- Nom -->
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Nom</label>
+                        <input type="text" class="form-control" name="nom" required>
+                    </div>
+
+                    <!-- Prénom -->
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Post nom</label>
+                        <input type="text" class="form-control" name="prenom" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Prénom</label>
+                        <input type="text" class="form-control" name="prenom" required>
+                    </div>
+                </div>
+              
+                <div class="row">
+                    <!-- sexe -->
+                    <div class="col-md-4 mb-3">
+                    <label class="form-label">Sexe</label>
+                    <select class="form-select" name="sexe" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="Masculin">Masculin</option>
+                        <option value="Féminin">Féminin</option>
+                    </select>
+                   </div>
+
+                    <!-- Prénom -->
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Age</label>
+                        <input type="text" class="form-control" name="prenom" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Adresse</label>
+                        <input type="text" class="form-control" name="prenom" required>
+                    </div>
+                </div>
+              
+                  <div class="row">
+                <div class="col-md-4 mb-3">
+                <!-- Username -->
+                <div class="mb-3">
+                    <label class="form-label">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" name="username" required>
+                </div>
+                </div>
+
+        
+            
+                <!-- Status -->
+              <div class="col-md-4 mb-3">
+                <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" name="status" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="Étudiant">Étudiant</option>
+                        <option value="Professeur">Professeur</option>
+                        <option value="Administrateur">Administrateur</option>
+                    </select>
+                
+                
+              
+                </div>
+                </div>
+                <div class="col-md-4 mb-3 ">
+                <!-- Bouton -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary mt-5">
+                        S'inscrire
+                    </button>
+                </div>
+                </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
