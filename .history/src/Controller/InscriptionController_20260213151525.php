@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Controller;
+
+use App\Repository\UserRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
+
+#[Route('/inscription', name: 'app_inscription_')]
+final class InscriptionController extends AbstractController
+{
+    #[Route('/', name: 'index')]
+    public function index(
+        UserRepository $userRepository): Response
+    {
+
+        $users = $userRepository->findAll();
+
+        return $this->render('inscription/inscription.html.twig', [
+            'users' => $users,
+        ]);
+    }
+
+    #[Route('/{id}', name: 'show')]
+    public function show(UserRepository $userRepository, int $id): Response
+    {
+        $user = $userRepository->find($id);
+        if (!$user) {
+            throw $this->createNotFoundException('User not found');
+        }
+
+        return $this->render('inscription/show.html.twig', [
+            'user' => $user,
+        ]);
+    }
+
+
+
+}
